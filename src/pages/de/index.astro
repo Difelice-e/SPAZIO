@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../../layouts/base.astro";
+import Services from "../../components/Services.astro";
+import Hero from "../../components/Hero.astro";
+import Cta from "../../components/Cta.astro";
+import { t, changeLanguage } from "i18next";
+
+changeLanguage("de");
+---
+
+<BaseLayout>
+	<Hero />
+	<Services />
+	<Cta />
+</BaseLayout>

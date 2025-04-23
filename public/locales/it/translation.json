@@ -1,6 +1,28 @@
 {
-    "home": {
-      "title": "Benvenuto",
-      "subtitle": "Questo è il tuo sito multilingua"
-    }
+  "home": {
+    "title": "Benvenuto",
+    "subtitle": "Questo è il tuo sito multilingue.",
+    "cta": "Ciao! Di cosa hai bisogno? Un renderista? Supporto per disegni esecutivi? Un collaboratore per un progetto temporaneo? Scrivi qui la tua richiesta e troveremo la soluzione perfetta per te!"
+  },
+  "hero": {
+    "list1": "invia un messaggio",
+    "list2": "attendi la risposta",
+    "list3": "ricevi il tuo lavoro",
+    "label": "Hai bisogno di un architetto freelance? Trovalo con un click!"
+  },
+  "services": {
+    "title": "Servizi",
+    "service1": "Modellazione 3D",
+    "service2": "Disegno Architettonico",
+    "service3": "Soluzione di Design",
+    "service4": "Progetto Paesaggistico"
+  },
+  "header": {
+    "hook": "Il pezzo mancante per il tuo progetto"
+  },
+  "footer": {
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a tellus quis ante fermentum ultricies ut nec odio. Aenean interdum.",
+    "about": "Chi siamo",
+    "copyright": "Tutti i diritti riservati."
   }
+}

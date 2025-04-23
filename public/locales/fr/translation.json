@@ -1,6 +1,28 @@
 {
-    "home": {
-      "title": "Benvenù",
-      "subtitle": "Est lè vouz sitè multilinguè"
-    }
+  "home": {
+    "title": "Bienvenue",
+    "subtitle": "Voici votre site multilingue.",
+    "cta": "Salut ! De quoi avez-vous besoin ? D’un infographiste 3D ? De l’aide pour des plans d’exécution ? D’un collaborateur pour un projet temporaire ? Tapez votre demande ici, et nous trouverons la solution idéale pour vous !"
+  },
+  "hero": {
+    "list1": "envoyer un message",
+    "list2": "attendez votre réponse",
+    "list3": "recevez votre travail",
+    "label": "Besoin d’un architecte freelance ? Trouvez-en un en un clic !"
+  },
+  "services": {
+    "title": "Services",
+    "service1": "Modélisation 3D",
+    "service2": "Dessin architectural",
+    "service3": "Solution de design",
+    "service4": "Projet paysager"
+  },
+  "header": {
+    "hook": "La pièce manquante à votre projet"
+  },
+  "footer": {
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a tellus quis ante fermentum ultricies ut nec odio. Aenean interdum.",
+    "about": "À propos de nous",
+    "copyright": "Tous droits réservés."
   }
+}

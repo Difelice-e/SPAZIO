@@ -1,0 +1,29 @@
+{
+    "home": {
+      "title": "Willkommen",
+      "subtitle": "Dies ist Ihre mehrsprachige Website.",
+      "cta": "Hallo! Was brauchen Sie? Einen Renderer? Unterstützung bei Ausführungsplänen? Einen Mitarbeiter für ein temporäres Projekt? Schreiben Sie hier Ihre Anfrage, und wir finden die perfekte Lösung für Sie!"
+    },
+    "hero": {
+      "list1": "eine Nachricht senden",
+      "list2": "auf Antwort warten",
+      "list3": "Arbeit erhalten",
+      "label": "Brauchen Sie einen freiberuflichen Architekten? Mit einem Klick gefunden!"
+    },
+    "services": {
+      "title": "Leistungen",
+      "service1": "3D-Modellierung",
+      "service2": "Architektonische Zeichnung",
+      "service3": "Designlösung",
+      "service4": "Landschaftsprojekt"
+    },
+    "header": {
+      "hook": "Das fehlende Puzzleteil für Ihr Projekt"
+    },
+    "footer": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a tellus quis ante fermentum ultricies ut nec odio. Aenean interdum.",
+      "about": "Über uns",
+      "copyright": "Alle Rechte vorbehalten."
+    }
+  }
+  
