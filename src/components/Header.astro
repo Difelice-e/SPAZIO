@@ -1,0 +1,42 @@
+---
+import LanguageSwitcher from "./LanguageSwitcher.astro";
+
+import { t } from "i18next";
+import { localizePath } from "astro-i18next";
+---
+
+<style>
+    header {
+        background-color: var(--white);
+        padding: 1rem 0;
+    }
+    #header-hook {
+        font-size: var(--text-xl);
+    }
+    .navbar-brand {
+        margin-right: 0 !important;
+    }
+    .header_logo {
+        height: 50px;
+    }
+</style>
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <span id="header-hook">{t("header.hook")}</span>
+                    </li>
+                </ul>
+                <LanguageSwitcher />
+            </div>
+            <a class="navbar-brand" href={localizePath("/")}>
+                <img class="header_logo" src="images/logo.png" alt="logo">
+            </a>
+        </div>
+      </nav>
+</header>

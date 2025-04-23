@@ -1,0 +1,55 @@
+---
+import { t } from "i18next";
+import { localizePath } from "astro-i18next";
+
+const currentYear = new Date().getFullYear();
+---
+
+<style>
+    footer {
+        background-color: var(--black);
+        color: var(--white);
+        padding: 2.5rem 0;
+    }
+    .footer_links {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .footer_logo-container {
+        text-align: right;
+    }
+    .footer_logo {
+        height: 120px;
+    }
+</style>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-3 order-1 order-md-1">
+                <div class="h-100 d-flex align-items-center">
+                    <span>{t("footer.description")}</span>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 order-3 order-md-2">
+                <div class="h-100 d-flex flex-column justify-content-between align-items-center">
+                    <ul class="footer_links">
+                        <li>
+                            <a href={localizePath('/about')}>{t("footer.about")}</a>
+                        </li>
+                    </ul>
+                    <div class="footer_copyrights">
+                        <span> © {currentYear} SPAZIO. {t("footer.copyright")}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 order-2 order-md-3">
+                <div class="footer_logo-container">
+                    <img class="footer_logo" src="images/logo.png" alt="logo">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

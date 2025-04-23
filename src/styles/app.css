@@ -1,0 +1,143 @@
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/avenir/AvenirLTStd-Light.otf') format('otf');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/avenir/AvenirLTStd-LightOblique.otf') format('otf');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/avenir/AvenirLTStd-Book.otf') format('otf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/avenir/AvenirLTStd-BookOblique.otf') format('otf');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/avenir/AvenirLTStd-Roman.otf') format('otf');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/avenir/AvenirLTStd-Oblique.otf') format('otf');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/avenir/AvenirLTStd-Medium.otf') format('otf');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/avenir/AvenirLTStd-MediumOblique.otf') format('otf');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/avenir/AvenirLTStd-Heavy.otf') format('otf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/avenir/AvenirLTStd-HeavyOblique.otf') format('otf');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/avenir/AvenirLTStd-Black.otf') format('otf');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/avenir/AvenirLTStd-BlackOblique.otf') format('otf');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+/* Palette */
+:root {
+  --primary-color: #F2A44A;
+  --light-grey: #E5E6E7;
+  --white: #FFFFFF;
+  --black: #231F20;
+  --font-body: 'Avenir', sans-serif;
+
+  font-size: 16px;
+
+  --text-xxs: 1em;
+  --text-xs: 1.125em;
+  --text-s: 1.125em;
+  --text-m: 1.25em;
+  --text-l: 1.375em;
+  --text-xl: 1.875em;
+  --text-xxl: 2.25em;
+}
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: var(--white);
+  color: var(--black);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: underline;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+}

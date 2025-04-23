@@ -1,0 +1,47 @@
+---
+import { t } from "i18next";
+const services = [t("services.service1"), t("services.service2"), t("services.service3"), t("services.service4")];
+---
+
+<style>
+    .services_title {
+        font-size: var(--text-xxl);
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    .services_box {
+        aspect-ratio: 1;
+        background: linear-gradient(135deg, var(--primary-color), #fbc67b);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2.5rem;
+        border-radius: 2.5rem;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        cursor: normaL;
+    }
+    .services_box-label {
+        color: var(--white);
+        text-transform: uppercase;
+        font-size: var(--text-l);
+        word-spacing: 100vh;
+    }
+</style>
+
+<section id="services" class="py-5">
+    <div class="container">
+        <div class="services_title">{t("services.title")}</div>
+        <div class="row g-4">
+            {
+              services.map(service => (
+                <div class="col-12 col-sm-6 col-md-3">
+                  <div class="services_box">
+                    <span class="services_box-label">{service}</span>
+                  </div>
+                </div>
+              ))
+            }
+        </div>
+    </div>
+</section>

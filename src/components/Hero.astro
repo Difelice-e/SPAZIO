@@ -1,0 +1,98 @@
+---
+import { t } from "i18next";
+
+const heroList = [t("hero.list1"), t("hero.list2"), t("hero.list3")];
+---
+
+<style>
+    #hero .container {
+        background-image: url('images/hero-bg-2.svg'), url('images/hero-bg.png');
+        background-repeat: no-repeat;
+        background-size: contain, contain;
+        background-position: right;
+        min-height: 300px;
+    }
+    .hero-list {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0;
+        font-size: var(--text-m);
+    }
+    .circled-number {
+        display: inline-flex;
+        aspect-ratio: 1;
+        height: var(--text-m);
+        border: 1px dashed var(--black);
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero-list_label {
+        font-style: italic;
+        letter-spacing: 3px;
+        font-weight: 300;
+    }
+    .hero-logo_container {
+        max-width: 80%;
+    }
+    .hero-logo_container img {
+        max-width: 100%;
+    }
+    .hero-logo_label {
+        font-size: var(--text-xxl);
+    }
+    .hero-form input,
+    .hero-form textarea {
+        display: block;
+        background-color: var(--light-grey);
+        resize: none;
+        outline: none;
+        border: none;
+        border-radius: 1.5rem;
+        padding: 1rem;
+        color: var(--black);
+        font-size: var(--text-l);
+    }
+    .hero-form input {
+        width: 50%;
+    }
+    .hero-form textarea {
+        width: 100%;
+        min-height: 200px;
+    }
+</style>
+
+<section id="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8 mb-5">
+                <div>
+                    <ul class="hero-list">
+                        {
+                            heroList.map((listItem, i) => (
+                                <li>
+                                    <span class="circled-number">{i + 1}</span>
+                                    <span class="hero-list_label">{listItem}</span>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 mb-5">
+                <div class="hero-logo_container mb-3">
+                    <img src="images/logo-xl.png">
+                </div>
+                <div class="hero-logo_label mb-5">{t("hero.label")}</div>
+            </div>
+            <div class="col-12 col-md-8">
+                <div class="hero-form">
+                    <input type="email" placeholder="Your email _" class="mb-3">
+                    <textarea placeholder="Message to S.P.A.Z.I.O. _"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

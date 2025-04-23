@@ -1,0 +1,28 @@
+{
+  "home": {
+    "title": "Welcome",
+    "subtitle": "This is your multilingual site.",
+    "cta": "Hi! What do you need? A renderer? Support for executive drawings? A collaborator for a temporary project? Type your request here, and we'll find the perfect solution for you!"
+  },
+  "hero": {
+    "list1": "send a message",
+    "list2": "wait your responde",
+    "list3": "take your job",
+    "label": "Need a freelance architect? Get one in a click!"
+  },
+  "services": {
+    "title": "Services",
+    "service1": "3D Modeling",
+    "service2": "Architectal Drawing",
+    "service3": "Design Solution",
+    "service4": "Paisage Project"
+  },
+  "header": {
+    "hook": "The missing piece to your project"
+  },
+  "footer": {
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a tellus quis ante fermentum ultricies ut nec odio. Aenean interdum.",
+    "about": "About Us",
+    "copyright": "All rights reserved."
+  }
+}
