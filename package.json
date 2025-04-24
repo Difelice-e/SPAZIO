@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "astro": "^5.5.5",
-    "astro-i18next": "^1.0.0-beta.21",
+    "astro-i18next": "^1.0.0-beta.13",
     "bootstrap": "^5.3.3"
   }
 }
