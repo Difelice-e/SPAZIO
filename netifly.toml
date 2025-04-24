@@ -1,2 +1,4 @@
-[build.environment]
-  NODE_VERSION = "18"
+[build]
+  command = "astro build"
+  functions = ".netlify/functions-internal"
+  publish = "dist"
