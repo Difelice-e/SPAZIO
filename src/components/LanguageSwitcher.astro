@@ -1,0 +1,45 @@
+---
+export interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const languages = ["en", "es", "fr", "de", "it"];
+const currentLang = languages.find(lang => lang === locale) ?? languages[0];
+---
+
+<style>
+  .dropdown-menu {
+    min-width: 1px;
+  }
+  .flag {
+    width: 30px;
+  }
+  .disabled-flag {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+</style>
+
+<div class="dropdown me-3">
+  <button
+    class="btn"
+    type="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    <img src={`/flags/${currentLang}.svg`} alt={currentLang} class="flag" />
+  </button>
+  <ul class="dropdown-menu">
+    {languages.map(lang => (
+      <li>
+        <a
+          class={`dropdown-item ${lang === currentLang ? 'disabled-flag' : ''}`}
+          href={lang === currentLang ? "#" : `/${lang}/`}
+        >
+          <img src={`/flags/${lang}.svg`} alt={lang} class="flag" />
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>

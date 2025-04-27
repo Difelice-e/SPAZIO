@@ -35,7 +35,7 @@ const t = createT(translations);
                         <span id="header-hook">{t("header.hook")}</span>
                     </li>
                 </ul>
-                <LanguageSwitcher />
+                <LanguageSwitcher locale={locale}/>
             </div>
             <a class="navbar-brand" href={getRelativeLocaleUrl(locale, "/")}>
                 <img class="header_logo" src="/images/logo.png" alt="logo">

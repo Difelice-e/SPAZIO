@@ -3,10 +3,12 @@ import BaseLayout from "../layouts/base.astro";
 import Services from "../components/Services.astro";
 import Hero from "../components/Hero.astro";
 import Cta from "../components/Cta.astro";
+
+const locale = Astro.currentLocale;
 ---
 
-<BaseLayout>
-	<Hero />
-	<Services />
-	<Cta />
+<BaseLayout locale={locale}>
+	<Hero locale={locale}/>
+	<Services locale={locale}/>
+	<Cta locale={locale}/>
 </BaseLayout>
