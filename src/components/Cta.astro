@@ -1,5 +1,5 @@
 ---
-import { t } from "i18next";
+const { locale } = Astro.props;
 ---
 
 <style>
@@ -22,7 +22,7 @@ import { t } from "i18next";
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
-                <div class="cta_text">{t("home.cta")}</div>
+                <!-- <div class="cta_text">{t("home.cta")}</div> -->
             </div>
         </div>
     </div>

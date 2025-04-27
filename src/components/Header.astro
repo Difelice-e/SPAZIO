@@ -1,8 +1,7 @@
 ---
 import LanguageSwitcher from "./LanguageSwitcher.astro";
 
-import { t } from "i18next";
-import { localizePath } from "astro-i18next";
+const { locale } = Astro.props;
 ---
 
 <style>
@@ -29,14 +28,14 @@ import { localizePath } from "astro-i18next";
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <span id="header-hook">{t("header.hook")}</span>
+                        <!-- <span id="header-hook">{t("header.hook")}</span> -->
                     </li>
                 </ul>
                 <LanguageSwitcher />
             </div>
-            <a class="navbar-brand" href={localizePath("/")}>
+            <!-- <a class="navbar-brand" href={localizePath("/")}>
                 <img class="header_logo" src="images/logo.png" alt="logo">
-            </a>
+            </a> -->
         </div>
       </nav>
 </header>

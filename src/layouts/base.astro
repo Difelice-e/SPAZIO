@@ -2,14 +2,13 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-import i18next from "i18next";
-import { HeadHrefLangs } from "astro-i18next/components";
-
 import "../styles/app.css";
+
+const {locale} = Astro.props;
 ---
 
 <!doctype html>
-<html lang={i18next.language}>
+<html lang={locale}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -19,13 +18,13 @@ import "../styles/app.css";
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.min.css">
-		<HeadHrefLangs />
+		<!-- <HeadHrefLangs /> -->
 	</head>
 	<body class="vh-100 d-flex flex-column">
-		<Header />
+		<Header locale={locale}/>
 		<main class="flex-grow-1">
 			<slot />
 		</main>
-		<Footer />
+		<Footer locale={locale}/>
 	</body>
 </html>

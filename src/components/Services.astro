@@ -1,6 +1,6 @@
 ---
-import { t } from "i18next";
-const services = [t("services.service1"), t("services.service2"), t("services.service3"), t("services.service4")];
+const { locale } = Astro.props;
+// const services = [t("services.service1"), t("services.service2"), t("services.service3"), t("services.service4")];
 ---
 
 <style>
@@ -31,9 +31,9 @@ const services = [t("services.service1"), t("services.service2"), t("services.se
 
 <section id="services" class="py-5">
     <div class="container">
-        <div class="services_title">{t("services.title")}</div>
+        <!-- <div class="services_title">{t("services.title")}</div> -->
         <div class="row g-4">
-            {
+            <!-- {
               services.map(service => (
                 <div class="col-12 col-sm-6 col-md-3">
                   <div class="services_box">
@@ -41,7 +41,7 @@ const services = [t("services.service1"), t("services.service2"), t("services.se
                   </div>
                 </div>
               ))
-            }
+            } -->
         </div>
     </div>
 </section>

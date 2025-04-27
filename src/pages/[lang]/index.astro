@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../../layouts/base.astro";
+import Services from "../../components/Services.astro";
+import Hero from "../../components/Hero.astro";
+import Cta from "../../components/Cta.astro";
+
+const locale = Astro.currentLocale;
+
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'fr' } },
+    { params: { lang: 'it' } },
+    { params: { lang: 'es' } },
+    { params: { lang: 'de' } },
+  ];
+}
+
+import { loadTranslations, createT } from "../../utils/i18n";
+
+const translations = await loadTranslations(locale);
+const t = createT(translations);
+---
+
+<BaseLayout locale={locale}>
+	{t("home.title")}
+	<Hero locale={locale}/>
+	<Services locale={locale}/>
+	<Cta locale={locale}/>
+</BaseLayout>

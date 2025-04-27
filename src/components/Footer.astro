@@ -1,8 +1,7 @@
 ---
-import { t } from "i18next";
-import { localizePath } from "astro-i18next";
-
 const currentYear = new Date().getFullYear();
+
+const { locale } = Astro.props;
 ---
 
 <style>
@@ -30,18 +29,18 @@ const currentYear = new Date().getFullYear();
         <div class="row">
             <div class="col-12 col-md-3 order-1 order-md-1">
                 <div class="h-100 d-flex align-items-center">
-                    <span>{t("footer.description")}</span>
+                    <!-- <span>{t("footer.description")}</span> -->
                 </div>
             </div>
             <div class="col-12 col-md-6 order-3 order-md-2">
                 <div class="h-100 d-flex flex-column justify-content-between align-items-center">
                     <ul class="footer_links">
                         <li>
-                            <a href={localizePath('/about')}>{t("footer.about")}</a>
+                            <!-- <a href={localizePath('/about')}>{t("footer.about")}</a> -->
                         </li>
                     </ul>
                     <div class="footer_copyrights">
-                        <span> © {currentYear} SPAZIO. {t("footer.copyright")}</span>
+                        <!-- <span> © {currentYear} SPAZIO. {t("footer.copyright")}</span> -->
                     </div>
                 </div>
             </div>
