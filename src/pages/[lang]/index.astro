@@ -15,15 +15,9 @@ export async function getStaticPaths() {
     { params: { lang: 'de' } },
   ];
 }
-
-import { loadTranslations, createT } from "../../utils/i18n";
-
-const translations = await loadTranslations(locale);
-const t = createT(translations);
 ---
 
 <BaseLayout locale={locale}>
-	{t("home.title")}
 	<Hero locale={locale}/>
 	<Services locale={locale}/>
 	<Cta locale={locale}/>

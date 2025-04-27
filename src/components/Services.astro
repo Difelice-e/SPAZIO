@@ -1,6 +1,11 @@
 ---
+import { loadTranslations, createT } from "../utils/i18n";
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
 const { locale } = Astro.props;
-// const services = [t("services.service1"), t("services.service2"), t("services.service3"), t("services.service4")];
+const translations = await loadTranslations(locale);
+const t = createT(translations);
+const services = [t("services.service1"), t("services.service2"), t("services.service3"), t("services.service4")];
 ---
 
 <style>
@@ -31,9 +36,9 @@ const { locale } = Astro.props;
 
 <section id="services" class="py-5">
     <div class="container">
-        <!-- <div class="services_title">{t("services.title")}</div> -->
+        <div class="services_title">{t("services.title")}</div>
         <div class="row g-4">
-            <!-- {
+            {
               services.map(service => (
                 <div class="col-12 col-sm-6 col-md-3">
                   <div class="services_box">
@@ -41,7 +46,7 @@ const { locale } = Astro.props;
                   </div>
                 </div>
               ))
-            } -->
+            }
         </div>
     </div>
 </section>

@@ -1,7 +1,11 @@
 ---
 import LanguageSwitcher from "./LanguageSwitcher.astro";
+import { loadTranslations, createT } from "../utils/i18n";
+import { getRelativeLocaleUrl } from 'astro:i18n';
 
 const { locale } = Astro.props;
+const translations = await loadTranslations(locale);
+const t = createT(translations);
 ---
 
 <style>
@@ -28,14 +32,14 @@ const { locale } = Astro.props;
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <!-- <span id="header-hook">{t("header.hook")}</span> -->
+                        <span id="header-hook">{t("header.hook")}</span>
                     </li>
                 </ul>
                 <LanguageSwitcher />
             </div>
-            <!-- <a class="navbar-brand" href={localizePath("/")}>
-                <img class="header_logo" src="images/logo.png" alt="logo">
-            </a> -->
+            <a class="navbar-brand" href={getRelativeLocaleUrl(locale, "/")}>
+                <img class="header_logo" src="/images/logo.png" alt="logo">
+            </a>
         </div>
       </nav>
 </header>

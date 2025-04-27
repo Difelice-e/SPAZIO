@@ -1,6 +1,11 @@
 ---
+import { loadTranslations, createT } from "../utils/i18n";
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
 const { locale } = Astro.props;
-// const heroList = [t("hero.list1"), t("hero.list2"), t("hero.list3")];
+const translations = await loadTranslations(locale);
+const t = createT(translations);
+const heroList = [t("hero.list1"), t("hero.list2"), t("hero.list3")];
 ---
 
 <style>
@@ -69,22 +74,22 @@ const { locale } = Astro.props;
             <div class="col-12 col-md-8 mb-5">
                 <div>
                     <ul class="hero-list">
-                        <!-- {
+                        {
                             heroList.map((listItem, i) => (
                                 <li>
                                     <span class="circled-number">{i + 1}</span>
                                     <span class="hero-list_label">{listItem}</span>
                                 </li>
                             ))
-                        } -->
+                        }
                     </ul>
                 </div>
             </div>
             <div class="col-12 col-md-8 mb-5">
                 <div class="hero-logo_container mb-3">
-                    <img src="images/logo-xl.png">
+                    <img src="/images/logo-xl.png">
                 </div>
-                <!-- <div class="hero-logo_label mb-5">{t("hero.label")}</div> -->
+                <div class="hero-logo_label mb-5">{t("hero.label")}</div>
             </div>
             <div class="col-12 col-md-8">
                 <div class="hero-form">
