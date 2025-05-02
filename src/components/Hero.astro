@@ -66,6 +66,17 @@ const heroList = [t("hero.list1"), t("hero.list2"), t("hero.list3")];
         width: 100%;
         min-height: 200px;
     }
+    .message-wrapper {
+        position: relative;
+    }
+    .message-wrapper img {
+        width: 30px;
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        filter: invert(75%) sepia(99%) saturate(3102%) hue-rotate(329deg) brightness(109%) contrast(90%);
+        cursor: pointer;
+    }
 </style>
 
 <section id="hero">
@@ -94,7 +105,10 @@ const heroList = [t("hero.list1"), t("hero.list2"), t("hero.list3")];
             <div class="col-12 col-md-8">
                 <div class="hero-form">
                     <input type="email" placeholder="Your email _" class="mb-3">
-                    <textarea placeholder="Message to S.P.A.Z.I.O. _"></textarea>
+                    <div class="message-wrapper">
+                        <textarea placeholder="Message to S.P.A.Z.I.O. _"></textarea>
+                        <img src="/icons/arrow-up-circle.svg">
+                    </div>
                 </div>
             </div>
         </div>

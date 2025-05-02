@@ -1,0 +1,140 @@
+---
+import BaseLayout from "../layouts/base.astro";
+
+const locale = Astro.currentLocale;
+
+const team = {
+    founders: [
+        {
+            name: "Mattia Martinelli",
+            role: "Architetto jr, paesaggistica sostenibile",
+            nation: "it"
+        },
+        {
+            name: "Samuele Finocchi",
+            role: "Architetto",
+            nation: "it"
+        }
+    ],
+    members: [
+        {
+            name: "Emanuele Di Felice",
+            role: "Web Developer, responsabile IT",
+            nation: "it"
+        },
+        {
+            name: "Carlo Alfonsetti",
+            role: "Investitore",
+            nation: "it"
+        }
+    ],
+    administrators: [
+        {
+            name: "Harumi",
+            role: "Paesaggista",
+            nation: "mx"
+        },
+        {
+            name: "Josuè",
+            role: "Architetto",
+            nation: "mx"
+        },
+        {
+            name: "Moritz schmail",
+            role: "Urbanista",
+            nation: "de"
+        },
+        {
+            name: "Jannik Krieger",
+            role: "Urbanista",
+            nation: "de"
+        }
+    ],
+    collaborators: [
+        {
+            name: "Ivanna Yáñez Solís",
+            role: "Architetto",
+            nation: "mx"
+        }
+    ]
+}
+---
+
+<style>
+    .member-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .member-card_photo-wrapper {
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .member-card_photo-wrapper img {
+        width: 100%;
+    }
+    .member-card_info-header {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .member-card_name {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: var(--text-l);
+    }
+    .member-card_info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .member-card_info-flag {
+        width: 30px;
+    }
+    .member-card_info-role {
+        color: var(--light-grey);
+    }
+</style>
+
+<BaseLayout locale={locale}>
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center">S.P.A.Z.I.O. Team Members</h1>
+                </div>
+            </div>
+            {
+                Object.entries(team).map(([sectionName, members]) => (
+                    <section class="section py-5">
+                        <h2 class="text-center mb-3">{sectionName.charAt(0).toUpperCase() + sectionName.slice(1)}</h2>
+                        <div class="row justify-content-center">
+                            {
+                                members.map(member => (
+                                    <div class="col-3">
+                                        <div class="member-card">
+                                            <div class="member-card_photo-wrapper mb-3">
+                                                <img src="https://picsum.photos/200/300">
+                                            </div>
+                                            <div class="member-card_info-header">
+                                                <div class="member-card_info-flag">
+                                                    <img src={`/flags/${member.nation}.svg`}>
+                                                </div>
+                                                <span class="member-card_name">{member.name}</span>
+                                            </div>
+                                            <div class="member-card_info">
+                                                <span class="member-card_info-role">{member.role}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </section>
+                ))
+            }
+        </div>
+    </section>
+</BaseLayout>

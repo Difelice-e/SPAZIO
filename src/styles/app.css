@@ -97,7 +97,7 @@
 :root {
   --primary-color: #F2A44A;
   --light-grey: #E5E6E7;
-  --white: #FFFFFF;
+  --white: #fefcfa;
   --black: #231F20;
   --font-body: 'Avenir', sans-serif;
 
@@ -140,4 +140,8 @@ table {
 th, td {
   padding: 8px;
   text-align: left;
+}
+img {
+  max-width: 100%;
+  display: block;
 }
