@@ -7,18 +7,18 @@ import Cta from "../../components/Cta.astro";
 const locale = Astro.currentLocale;
 
 export async function getStaticPaths() {
-  return [
-    { params: { lang: 'en' } },
-    { params: { lang: 'fr' } },
-    { params: { lang: 'it' } },
-    { params: { lang: 'es' } },
-    { params: { lang: 'de' } },
-  ];
+	return [
+		{ params: { lang: "en" } },
+		{ params: { lang: "fr" } },
+		{ params: { lang: "it" } },
+		{ params: { lang: "es" } },
+		{ params: { lang: "de" } },
+	];
 }
 ---
 
 <BaseLayout locale={locale}>
-	<Hero locale={locale}/>
-	<Services locale={locale}/>
-	<Cta locale={locale}/>
+	<Hero locale={locale} />
+	<Services locale={locale} />
+	<Cta locale={locale} />
 </BaseLayout>

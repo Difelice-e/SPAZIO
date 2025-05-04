@@ -1,6 +1,6 @@
 ---
 import { loadTranslations, createT } from "../utils/i18n";
-import { getRelativeLocaleUrl } from 'astro:i18n';
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 const { locale } = Astro.props;
 const translations = await loadTranslations(locale);
@@ -10,7 +10,8 @@ const heroList = [t("hero.list1"), t("hero.list2"), t("hero.list3")];
 
 <style>
     #hero .container {
-        background-image: url('/images/hero-bg-2.svg'), url('/images/hero-bg.png');
+        background-image: url("/images/hero-bg-2.svg"),
+            url("/images/hero-bg.png");
         background-repeat: no-repeat;
         background-size: contain, contain;
         background-position: right;
@@ -73,7 +74,8 @@ const heroList = [t("hero.list1"), t("hero.list2"), t("hero.list3")];
         position: absolute;
         bottom: 1rem;
         right: 1rem;
-        filter: invert(75%) sepia(99%) saturate(3102%) hue-rotate(329deg) brightness(109%) contrast(90%);
+        filter: invert(75%) sepia(99%) saturate(3102%) hue-rotate(329deg)
+            brightness(109%) contrast(90%);
         cursor: pointer;
     }
 </style>
@@ -88,7 +90,9 @@ const heroList = [t("hero.list1"), t("hero.list2"), t("hero.list3")];
                             heroList.map((listItem, i) => (
                                 <li>
                                     <span class="circled-number">{i + 1}</span>
-                                    <span class="hero-list_label">{listItem}</span>
+                                    <span class="hero-list_label">
+                                        {listItem}
+                                    </span>
                                 </li>
                             ))
                         }
@@ -97,16 +101,21 @@ const heroList = [t("hero.list1"), t("hero.list2"), t("hero.list3")];
             </div>
             <div class="col-12 col-md-8 mb-5">
                 <div class="hero-logo_container mb-3">
-                    <img src="/images/logo-xl.png">
+                    <img src="/images/logo-xl.png" />
                 </div>
                 <div class="hero-logo_label mb-5">{t("hero.label")}</div>
             </div>
             <div class="col-12 col-md-8">
                 <div class="hero-form">
-                    <input type="email" placeholder="Your email _" class="mb-3">
+                    <input
+                        type="email"
+                        placeholder="Your email _"
+                        class="mb-3"
+                    />
                     <div class="message-wrapper">
-                        <textarea placeholder="Message to S.P.A.Z.I.O. _"></textarea>
-                        <img src="/icons/arrow-up-circle.svg">
+                        <textarea placeholder="Message to S.P.A.Z.I.O. _"
+                        ></textarea>
+                        <img src="/icons/arrow-up-circle.svg" />
                     </div>
                 </div>
             </div>

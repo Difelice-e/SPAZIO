@@ -1,7 +1,7 @@
 ---
 import LanguageSwitcher from "./LanguageSwitcher.astro";
 import { loadTranslations, createT } from "../utils/i18n";
-import { getRelativeLocaleUrl } from 'astro:i18n';
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 const { locale } = Astro.props;
 const translations = await loadTranslations(locale);
@@ -26,7 +26,15 @@ const t = createT(translations);
 <header>
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -35,11 +43,11 @@ const t = createT(translations);
                         <span id="header-hook">{t("header.hook")}</span>
                     </li>
                 </ul>
-                <LanguageSwitcher locale={locale}/>
+                <LanguageSwitcher locale={locale} />
             </div>
             <a class="navbar-brand" href={getRelativeLocaleUrl(locale, "/")}>
-                <img class="header_logo" src="/images/logo.png" alt="logo">
+                <img class="header_logo" src="/images/logo.png" alt="logo" />
             </a>
         </div>
-      </nav>
+    </nav>
 </header>

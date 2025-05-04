@@ -7,13 +7,13 @@ const translations = await loadTranslations(locale);
 const t = createT(translations);
 
 export async function getStaticPaths() {
-  return [
-    { params: { lang: 'en' } },
-    { params: { lang: 'fr' } },
-    { params: { lang: 'it' } },
-    { params: { lang: 'es' } },
-    { params: { lang: 'de' } },
-  ];
+	return [
+		{ params: { lang: "en" } },
+		{ params: { lang: "fr" } },
+		{ params: { lang: "it" } },
+		{ params: { lang: "es" } },
+		{ params: { lang: "de" } },
+	];
 }
 
 const team = {
