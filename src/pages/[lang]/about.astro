@@ -1,4 +1,5 @@
 ---
+import Team from "../../components/Team.astro";
 import BaseLayout from "../../layouts/base.astro";
 import { loadTranslations, createT } from "../../utils/i18n";
 
@@ -15,77 +16,6 @@ export async function getStaticPaths() {
 		{ params: { lang: "de" } },
 	];
 }
-
-const team = {
-	founder: [
-		{
-			name: "Mattia Martinelli",
-			roles: ["sustainablehabitatgrad", "architectjr"],
-			nation: "it",
-		},
-		{
-			name: "Samuele Finocchi",
-			roles: ["architect"],
-			nation: "it",
-		},
-	],
-	member: [
-		{
-			name: "Emanuele Di Felice",
-			roles: ["webdev", "webmanager"],
-			nation: "it",
-		},
-		{
-			name: "Carlo Alfonsetti",
-			roles: ["investor"],
-			nation: "it",
-		},
-	],
-	administrator: [
-		{
-			name: "Harumi Alvarado",
-			roles: ["landscapearchitect", "mexicocoord", "socialmediamgr"],
-			nation: "mx",
-		},
-		{
-			name: "Rodrigo Moctezuma",
-			roles: ["architect", "latamcoord"],
-			nation: "mx",
-		},
-		{
-			name: "Moritz Schmail",
-			roles: ["urbanplanner", "germanycoord"],
-			nation: "de",
-		},
-	],
-	collaborator: [
-		{
-			name: "Ivanna Yáñez Solís",
-			roles: ["architect"],
-			nation: "mx",
-		},
-		{
-			name: "Josué Noriega",
-			roles: ["architect"],
-			nation: "mx",
-		},
-		{
-			name: "Jannik Krieger",
-			roles: ["urbanplanner"],
-			nation: "de",
-		},
-		{
-			name: "Federico bonfanti",
-			roles: ["productdesigner"],
-			nation: "it",
-		},
-		{
-			name: "Camillo Ramos",
-			roles: ["industrialdesigner"],
-			nation: "co",
-		},
-	],
-};
 ---
 
 <style>
@@ -95,96 +25,19 @@ const team = {
 	.section-title {
 		font-weight: bold;
 	}
-	.member-card {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding: 0 1rem;
-	}
-	.member-card_photo-wrapper {
-		width: 100%;
-		aspect-ratio: 1;
-		/* border-radius: 50%; */
-		overflow: hidden;
-		box-shadow: 8px -8px 0px var(--primary-color);
-	}
-	.member-card_photo-wrapper img {
-		width: 100%;
-		filter: grayscale();
-	}
-	.member-card_info-header {
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-	}
-	.member-card_name {
-		text-transform: uppercase;
-		font-weight: bold;
-		font-size: var(--text-l);
-	}
-	.member-card_info-flag {
-		width: 30px;
-	}
-	.member-card_info-role {
-		color: var(--grey);
-		text-align: center;
-	}
 </style>
 
 <BaseLayout locale={locale}>
 	<section class="py-5">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12 col-md-8">
+				<div class="col-sm-12 col-lg-8">
 					<h1>{t("about.title")}</h1>
 					<h2>{t("about.subtitle")}</h2>
 					<p class="about-description">{t("about.description")}</p>
 				</div>
 			</div>
-			<section class="section py-5">
-				<div class="row justify-content-center gy-5">
-					{
-						Object.entries(team).map(([sectionName, members]) =>
-							members.map((member) => (
-								<div class="col-sm-12 col-md-3">
-									<div class="member-card">
-										<div class="member-card_photo-wrapper mb-3">
-											<img
-												src="https://picsum.photos/200/300"
-												alt={member.name}
-											/>
-										</div>
-										<div class="d-flex align-items-center">
-											<div class="member-card_info-flag me-1">
-												<img
-													src={`/flags/${member.nation}.svg`}
-													alt={member.nation}
-												/>
-											</div>
-											<span>
-												{t(
-													"about.position." +
-														sectionName,
-												)}
-											</span>
-										</div>
-										<div class="member-card_info-header">
-											<span class="member-card_name">
-												{member.name}
-											</span>
-										</div>
-										{member.roles.map((role) => (
-											<span class="member-card_info-role">
-												{t("about.role." + role)}
-											</span>
-										))}
-									</div>
-								</div>
-							)),
-						)
-					}
-				</div>
-			</section>
+			<Team locale={locale}/>
 		</div>
 	</section>
 </BaseLayout>

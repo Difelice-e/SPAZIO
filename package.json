@@ -10,6 +10,12 @@
   },
   "dependencies": {
     "astro": "^5.5.5",
-    "bootstrap": "^5.3.3"
-  }
+    "bootstrap": "^5.3.3",
+    "nodemailer": "^7.0.0"
+  },
+  "description": "```sh npm create astro@latest -- --template basics ```",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

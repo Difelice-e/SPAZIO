@@ -69,14 +69,17 @@ const heroList = [t("hero.list1"), t("hero.list2"), t("hero.list3")];
     .message-wrapper {
         position: relative;
     }
-    .message-wrapper img {
-        width: 30px;
+    .message-wrapper button {
         position: absolute;
         bottom: 1rem;
         right: 1rem;
+        border: none;
+        cursor: pointer;
+    }
+    .message-wrapper img {
+        width: 30px;
         filter: invert(75%) sepia(99%) saturate(3102%) hue-rotate(329deg)
             brightness(109%) contrast(90%);
-        cursor: pointer;
     }
 </style>
 
@@ -106,19 +109,45 @@ const heroList = [t("hero.list1"), t("hero.list2"), t("hero.list3")];
                 <div class="hero-logo_label mb-5">{t("hero.label")}</div>
             </div>
             <div class="col-12 col-md-8">
-                <div class="hero-form">
+                <form id="contact-form" class="hero-form">
                     <input
                         type="email"
                         placeholder="Your email _"
                         class="mb-3"
+                        required
                     />
                     <div class="message-wrapper">
-                        <textarea placeholder="Message to S.P.A.Z.I.O. _"
-                        ></textarea>
-                        <img src="/icons/arrow-up-circle.svg" />
+                        <textarea
+                            placeholder="Message to S.P.A.Z.I.O. _"
+                            required></textarea>
+                        <button type="submit">
+                            <img src="/icons/arrow-up-circle.svg" />
+                        </button>
                     </div>
-                </div>
+                    <input type="hidden" name="lang" value={locale} />
+                </form>
             </div>
         </div>
     </div>
 </section>
+
+<script type="module">
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+  
+      const data = new FormData(form);
+      const res = await fetch("/.netlify/functions/send-email", {
+        method: "POST",
+        body: JSON.stringify(Object.fromEntries(data)),
+        headers: { "Content-Type": "application/json" },
+      });
+  
+      if (res.ok) {
+        alert("Messaggio inviato!");
+        form.reset();
+      } else {
+        alert("Errore nell'invio.");
+      }
+    });
+  </script>
