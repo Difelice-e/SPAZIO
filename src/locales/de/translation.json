@@ -1,29 +1,55 @@
 {
-    "home": {
-      "title": "Willkommen",
-      "subtitle": "Dies ist Ihre mehrsprachige Website.",
-      "cta": "Hallo! Was brauchen Sie? Einen Renderer? Unterstützung bei Ausführungsplänen? Einen Mitarbeiter für ein temporäres Projekt? Schreiben Sie hier Ihre Anfrage, und wir finden die perfekte Lösung für Sie!"
+  "home": {
+    "title": "Willkommen",
+    "subtitle": "Dies ist Ihre mehrsprachige Website.",
+    "cta": "Hallo! Was brauchen Sie? Einen Renderer? Unterstützung bei Ausführungsplänen? Einen Mitarbeiter für ein temporäres Projekt? Schreiben Sie hier Ihre Anfrage, und wir finden die perfekte Lösung für Sie!"
+  },
+  "hero": {
+    "list1": "eine Nachricht senden",
+    "list2": "auf Antwort warten",
+    "list3": "Arbeit erhalten",
+    "label": "Brauchen Sie einen freiberuflichen Architekten? Mit einem Klick gefunden!"
+  },
+  "services": {
+    "title": "Leistungen",
+    "service1": "3D-Modellierung",
+    "service2": "Architektonische Zeichnung",
+    "service3": "Designlösung",
+    "service4": "Landschaftsprojekt"
+  },
+  "header": {
+    "hook": "Das fehlende Puzzleteil für Ihr Projekt"
+  },
+  "footer": {
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a tellus quis ante fermentum ultricies ut nec odio. Aenean interdum.",
+    "about": "Über uns",
+    "copyright": "Alle Rechte vorbehalten."
+  },
+  "about": {
+    "title": "Das S.P.A.Z.I.O.-Team",
+    "subtitle": "Erfahrung, Kreativität und eine globale Vision.",
+    "description": "Ein internationales Kollektiv aus Architekten, Stadtplanern, Designern und Fachleuten, vereint durch eine gemeinsame Vision von nachhaltigem Raum. Von Italien bis Kolumbien entwerfen wir mit Fachwissen, Leidenschaft und einer offenen Sicht auf die Welt.",
+    "position": {
+      "founder": "Gründer",
+      "member": "Mitglied",
+      "administrator": "Administrator",
+      "collaborator": "Mitarbeiter"
     },
-    "hero": {
-      "list1": "eine Nachricht senden",
-      "list2": "auf Antwort warten",
-      "list3": "Arbeit erhalten",
-      "label": "Brauchen Sie einen freiberuflichen Architekten? Mit einem Klick gefunden!"
-    },
-    "services": {
-      "title": "Leistungen",
-      "service1": "3D-Modellierung",
-      "service2": "Architektonische Zeichnung",
-      "service3": "Designlösung",
-      "service4": "Landschaftsprojekt"
-    },
-    "header": {
-      "hook": "Das fehlende Puzzleteil für Ihr Projekt"
-    },
-    "footer": {
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a tellus quis ante fermentum ultricies ut nec odio. Aenean interdum.",
-      "about": "Über uns",
-      "copyright": "Alle Rechte vorbehalten."
+    "role": {
+      "sustainablehabitatgrad": "Absolvent der Wissenschaften für nachhaltiges Wohnen",
+      "architectjr": "Architekt Jr",
+      "architect": "Architekt",
+      "webdev": "Webentwickler",
+      "webmanager": "Webmanager",
+      "investor": "Investor",
+      "landscapearchitect": "Landschaftsarchitekt",
+      "mexicocoord": "Mexiko-Koordinator",
+      "socialmediamgr": "Social-Media-Manager",
+      "latamcoord": "Lateinamerika-Koordinator",
+      "urbanplanner": "Stadtplaner",
+      "germanycoord": "Deutschland-Koordinator",
+      "productdesigner": "Produktdesigner",
+      "industrialdesigner": "Industriedesigner"
     }
   }
-  
+}

@@ -24,5 +24,32 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a tellus quis ante fermentum ultricies ut nec odio. Aenean interdum.",
     "about": "About Us",
     "copyright": "All rights reserved."
+  },
+  "about": {
+    "title": "The S.P.A.Z.I.O. Team",
+    "subtitle": "Experience, creativity, and a global vision.",
+    "description": "An international collective of architects, urban planners, designers, and specialists united by a shared vision of sustainable space. From Italy to Colombia, we design with expertise, passion, and an open outlook on the world.",
+    "position": {
+      "founder": "Founder",
+      "member": "Member",
+      "administrator": "Administrator",
+      "collaborator": "Collaborator"
+    },
+    "role": {
+      "sustainablehabitatgrad": "Graduate in Sustainable Habitat Sciences",
+      "architectjr": "Architect Jr",
+      "architect": "Architect",
+      "webdev": "Web Developer",
+      "webmanager": "Web Manager",
+      "investor": "Investor",
+      "landscapearchitect": "Landscape Architect",
+      "mexicocoord": "Mexico Coordinator",
+      "socialmediamgr": "Social Media Manager",
+      "latamcoord": "Latin America Coordinator",
+      "urbanplanner": "Urban Planner",
+      "germanycoord": "Germany Coordinator",
+      "productdesigner": "Product Designer",
+      "industrialdesigner": "Industrial Designer"
+    }
   }
 }
