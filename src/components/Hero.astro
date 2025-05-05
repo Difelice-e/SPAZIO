@@ -1,6 +1,5 @@
 ---
 import { loadTranslations, createT } from "../utils/i18n";
-import { getRelativeLocaleUrl } from "astro:i18n";
 
 const { locale } = Astro.props;
 const translations = await loadTranslations(locale);
@@ -14,7 +13,11 @@ const heroList = [t("hero.list1"), t("hero.list2"), t("hero.list3")];
             url("/images/hero-bg.png");
         background-repeat: no-repeat;
         background-size: contain, contain;
-        background-position: right;
+        background-position: calc(100% - 12px);
+    }
+    #hero .container .row {
+        max-height: calc(1080px - 150px);
+        height: calc(100vh - 150px);
     }
     .hero-list {
         list-style-type: none;
@@ -47,6 +50,9 @@ const heroList = [t("hero.list1"), t("hero.list2"), t("hero.list3")];
     .hero-logo_label {
         font-size: var(--text-xxl);
     }
+    .hero-form {
+        width: 100%;
+    }
     .hero-form input,
     .hero-form textarea {
         display: block;
@@ -58,6 +64,7 @@ const heroList = [t("hero.list1"), t("hero.list2"), t("hero.list3")];
         padding: 1rem;
         color: var(--black);
         font-size: var(--text-l);
+        width: 100%;
     }
     .hero-form input {
         width: 50%;
@@ -95,7 +102,7 @@ const heroList = [t("hero.list1"), t("hero.list2"), t("hero.list3")];
 <section id="hero" class="mb-10">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-8 mb-10">
+            <div class="col-12 mb-10">
                 <div>
                     <ul class="hero-list">
                         {
@@ -113,11 +120,11 @@ const heroList = [t("hero.list1"), t("hero.list2"), t("hero.list3")];
             </div>
             <div class="col-12 col-md-8 mb-12">
                 <div class="hero-logo_container mb-8">
-                    <img src="/images/logo-xl.png" />
+                    <img src="/images/logo-xl.png" alt="SPAZIO LOGO" />
                 </div>
                 <div class="hero-logo_label mb-5">{t("hero.label")}</div>
             </div>
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-md-8 d-flex align-items-end">
                 <form id="contact-form" class="hero-form">
                     <input
                         type="email"
@@ -130,7 +137,7 @@ const heroList = [t("hero.list1"), t("hero.list2"), t("hero.list3")];
                             placeholder="Message to S.P.A.Z.I.O. _"
                             required></textarea>
                         <button type="submit">
-                            <img src="/icons/arrow-up-circle.svg" />
+                            <img src="/icons/arrow-up-circle.svg" alt="send form"/>
                         </button>
                     </div>
                     <input type="hidden" name="lang" value={locale} />

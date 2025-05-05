@@ -65,7 +65,7 @@ export const team = {
 		{
 			name: "Carlo Alfonsetti",
             img: "carloalfonsetti.jpg",
-			roles: ["investor"],
+			roles: ["europecoord", "investor"],
 			nation: ["it", "ch"],
 		},
 		{
