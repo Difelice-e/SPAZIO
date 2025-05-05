@@ -56,6 +56,7 @@ export const team = {
 		},
 		{
 			name: "Federico bonfanti",
+			img: "federicobonfanti.jpg",
 			roles: ["productdesigner"],
 			nation: ["it"],
 		}
