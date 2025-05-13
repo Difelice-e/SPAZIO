@@ -1,6 +1,5 @@
 const nodemailer = require("nodemailer");
 exports.handler = async (event) => {
-  console.log('invia', event)
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
   }
@@ -15,8 +14,8 @@ exports.handler = async (event) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.GMAIL_USER, // spazio.assistance@gmail.com
-      pass: process.env.GMAIL_PASS, // app password
+      user: process.env.GMAIL_USER,
+      pass: process.env.GMAIL_PASS,
     },
   });
 
