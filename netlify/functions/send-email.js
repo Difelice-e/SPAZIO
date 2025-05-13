@@ -35,7 +35,7 @@ exports.handler = async (event) => {
   } catch (error) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: "Errore nell'invio t", details: error.message }),
+      body: JSON.stringify({ error: "Errore nell'invio t " + process.env.GMAIL_USER + ' ' + process.env.GMAIL_PASS, details: error.message }),
     };
   }
 };
