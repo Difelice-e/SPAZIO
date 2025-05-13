@@ -1,6 +1,6 @@
 const nodemailer = require("nodemailer");
-console.log('invia', event)
 exports.handler = async (event) => {
+  console.log('invia', event)
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
   }
@@ -36,7 +36,7 @@ exports.handler = async (event) => {
   } catch (error) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: "Errore nell'invio", details: error.message }),
+      body: JSON.stringify({ error: "Errore nell'invio t", details: error.message }),
     };
   }
 };
